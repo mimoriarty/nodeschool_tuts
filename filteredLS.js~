@@ -1,0 +1,11 @@
+'use strict';
+
+let path = process.argv[2],
+	ext = process.argv[3],
+	filterExt = x => x === ext,
+	callback = (err, files) => { files.reduce(filterExt) },
+	fs = require('fs');
+
+fs.readdir(path, )
+
+console.log(path);
