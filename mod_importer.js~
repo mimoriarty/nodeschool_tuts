@@ -1,5 +1,16 @@
 'use strict';
 
-let listFilesMD = require('./mod_filtered.js');
+var
+	myModule = require('./mod_filteredLS.js'),
+	dir = process.argv[2],
+	ext = process.argv[3];
 
-listFilesMD.readfilesMD();
+myModule(dir, ext, function (err, data) 
+ {
+     if (err) return console.log('ERROR');
+
+     data.forEach(function (d)
+     {
+         console.log(d.toString());
+     });
+ });
