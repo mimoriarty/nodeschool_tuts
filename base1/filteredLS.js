@@ -6,7 +6,11 @@ let
 	path = process.argv[2],
 	ext = process.argv[3],
 	filterExt = (err, files) => {
-		files.filter(file => { if (file.toString().split('.')[1] === ext) { console.log(file); } });	
+		files.filter(file => { 
+			if (file.toString().split('.')[1] === ext) {
+				console.log(file); 
+			} 
+		});	
 	};
 
 fs.readdir(path, filterExt);
@@ -26,4 +30,4 @@ var ext = '.' + process.argv[3]
                console.log(file)  
            }  
        })  
-     }) 
+     }) */
